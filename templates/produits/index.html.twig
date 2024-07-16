@@ -1,0 +1,392 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	{# Englobe toute la page #}
+	<section
+		class="space-y-[40px]">
+		{# Recherche #}
+		<section class="flex flex-col space-y-6 mt-[40px]">
+			<input class="px-3 py-4 w-full outline-none bg-gray-200 focus:ring-2 rounded-md" placeholder="Faites votre recherche ici"/>
+
+			<div>
+				<select class="bg-[#1C448E] text-white p-3 rounded-md">
+					<option>Categorie 1</option>
+					<option>Categorie 1</option>
+					<option>Categorie 1</option>
+					<option>Categorie 1</option>
+				</select>
+			</div>
+		</section>
+
+		<section
+			class="flex flex-col space-y-6 pb-[40px]">
+
+			{# Informations Tendances #}
+			<div class="flex items-center justify-between">
+				<div class="flex space-x-5 items-center">
+					<div class="h-[30px] w-[15px] bg-[#1C448E] rounded-sm"></div>
+					<p class="text-[#1C448E] text-2xl font-[600]">Tendances</p>
+				</div>
+				<div class="flex space-x-2 items-center">
+					<a href="#" class="p-2 rounded-full bg-gray-200">
+						<i class="fa-solid fa-arrow-left"></i>
+					</a>
+					<a href="#" class="p-2 rounded-full bg-gray-200">
+						<i class="fa-solid fa-arrow-right"></i>
+					</a>
+				</div>
+			</div>
+
+			{# Partie affichage des produits #}
+			<div
+				class="flex space-x-[50px]">
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+					</div>
+				</div>
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+					</div>
+				</div>
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+					</div>
+				</div>
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+					</div>
+				</div>
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			class="flex flex-col space-y-6 pb-[40px]">
+
+			{# Informations Tendances #}
+			<div class="flex items-center justify-between">
+				<div class="flex space-x-5 items-center">
+					<div class="h-[30px] w-[15px] bg-[#1C448E] rounded-sm"></div>
+					<p class="text-[#1C448E] text-2xl font-[600]">Juste pour vous</p>
+				</div>
+				<div class="flex space-x-2 items-center">
+					<a href="#" class="p-2 rounded-full bg-gray-200">
+						<i class="fa-solid fa-arrow-left"></i>
+					</a>
+					<a href="#" class="p-2 rounded-full bg-gray-200">
+						<i class="fa-solid fa-arrow-right"></i>
+					</a>
+				</div>
+			</div>
+
+			{# Partie affichage des produits #}
+			<div
+				class="flex space-x-[50px]">
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+					</div>
+				</div>
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+					</div>
+				</div>
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+					</div>
+				</div>
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+					</div>
+				</div>
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+{% endblock %}

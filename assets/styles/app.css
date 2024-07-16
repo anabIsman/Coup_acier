@@ -1,3 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /*--primary: #1C448E; -- Bleu de la maquette -- */
+    --primary: #0D6EFD;
+    --secondary: #FFAD33;
+    --font-dark: #404040;
+    --font-light: #757575;
+    --font: "Poppins", sans-serif;
+
+    font-size: 16px; /* 1em = 16px */
+}
+
+a {
+    transition: .3s;
+}
+
+a:hover, .navbar-nav a:hover {
+    color: var(--primary);
+}
+
 body {
-    background-color: skyblue;
+    font-family: var(--font);
+
+    h1, h2, h3, h4, h5, h6, a, p {
+        color: var(--font-dark);
+    }
+
+    .navbar {
+        [type="search"] {
+            margin-left: -2rem;
+        }
+    }
+
+    .navbar-brand {
+        font-weight: 600;
+    }
+
+    .nav-item a {
+        font-weight: 400;
+
+        &.nav-link.active {
+            color: var(--primary);
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 70%;
+                left: 50%;
+                bottom: 8px;
+                transform: translateX(-50%);
+                height: 1px;
+                background-color: var(--primary);
+            }
+        }
+    }
+}
+
+#homepage {
+    .home-nav {
+        width: 80%;
+
+        li a {
+            font-weight: 400;
+            color: var(--font-dark);
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
 }

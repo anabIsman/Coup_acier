@@ -1,166 +1,864 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<div class="container">
-		<div class="carousel-left">
-			<ul>
-				<li></li>
-				<li></li>
+
+	<style>
+		.custom-gradient {
+			background-image: radial-gradient(circle at center center, white 0%, rgba(255, 255, 255, 0) 60%);
+		}
+	</style>
+
+	{# Section Menu rapide #}
+	<section
+		class="flex mt-[0px]">
+
+		{# Partie à gauche où sont les listes #}
+		<div class="p-[50px] mr-[50px] border-r-2">
+			<ul class="flex flex-col space-y-5">
+				<li class="flex space-x-5 items-center">
+					<p>Commander</p>
+					<i class="fa-solid fa-chevron-right"></i>
+				</li>
+
+				<li class="flex space-x-5 items-center">
+					<p>Aide à la découpe</p>
+					<i class="fa-solid fa-chevron-right"></i>
+				</li>
+
+				<li class="flex space-x-5 items-center">
+					<p>Livraison</p>
+					<i class="fa-solid fa-chevron-right"></i>
+				</li>
 			</ul>
 		</div>
-		<div class="carousel-right">
-			<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-				<div class="carousel-indicators">
-					<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-					<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-					<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-				</div>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveaspectratio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-						<div class="container">
-							<div class="carousel-caption text-start">
-								<h1>Example headline.</h1>
-								<p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-								<p>
-									<a class="btn btn-lg btn-primary" href="#">Sign up today</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveaspectratio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-						<div class="container">
-							<div class="carousel-caption">
-								<h1>Another example headline.</h1>
-								<p>Some representative placeholder content for the second slide of the carousel.</p>
-								<p>
-									<a class="btn btn-lg btn-primary" href="#">Learn more</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveaspectratio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-						<div class="container">
-							<div class="carousel-caption text-end">
-								<h1>One more for good measure.</h1>
-								<p>Some representative placeholder content for the third slide of this carousel.</p>
-								<p>
-									<a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
-			</div>
 
-
-			
-
-			<div
-				class="container marketing">
-
-				<div class="row">
-					<div class="col-lg-4">
-						<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveaspectratio="xMidYMid slice" focusable="false">
-							<title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-						<h2 class="fw-normal">Heading</h2>
-						<p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-						<p>
-							<a class="btn btn-secondary" href="#">View details &raquo;</a>
-						</p>
-					</div>
-					
-					<div class="col-lg-4">
-						<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveaspectratio="xMidYMid slice" focusable="false">
-							<title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-						<h2 class="fw-normal">Heading</h2>
-						<p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-						<p>
-							<a class="btn btn-secondary" href="#">View details &raquo;</a>
-						</p>
-					</div>
-					
-					<div class="col-lg-4">
-						<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveaspectratio="xMidYMid slice" focusable="false">
-							<title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-						<h2 class="fw-normal">Heading</h2>
-						<p>And lastly this, the third column of representative placeholder content.</p>
-						<p>
-							<a class="btn btn-secondary" href="#">View details &raquo;</a>
-						</p>
-					</div>
-					
-				</div>
-	
-
-
-
-
-				<hr class="featurette-divider">
-
-				<div class="row featurette">
-					<div class="col-md-7">
-						<h2 class="featurette-heading fw-normal lh-1">First featurette heading.
-							<span class="text-body-secondary">It’ll blow your mind.</span>
-						</h2>
-						<p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-					</div>
-					<div class="col-md-5">
-						<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveaspectratio="xMidYMid slice" focusable="false">
-							<title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-						</svg>
-					</div>
-				</div>
-
-				<hr class="featurette-divider">
-
-				<div class="row featurette">
-					<div class="col-md-7 order-md-2">
-						<h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good.
-							<span class="text-body-secondary">See for yourself.</span>
-						</h2>
-						<p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-					</div>
-					<div class="col-md-5 order-md-1">
-						<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveaspectratio="xMidYMid slice" focusable="false">
-							<title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-						</svg>
-					</div>
-				</div>
-
-				<hr class="featurette-divider">
-
-				<div class="row featurette">
-					<div class="col-md-7">
-						<h2 class="featurette-heading fw-normal lh-1">And lastly, this one.
-							<span class="text-body-secondary">Checkmate.</span>
-						</h2>
-						<p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-					</div>
-					<div class="col-md-5">
-						<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveaspectratio="xMidYMid slice" focusable="false">
-							<title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-						</svg>
-					</div>
-				</div>
-
-				<hr class="featurette-divider">
-
-
-			</div>
-
-
+		{# Partie à droite où il y'a l'image #}
+		<div class="flex-1 p-[50px]">
+			<img class="object-contain w-full" src="{{ asset("./img/AcierImage.png") }}">
 		</div>
-	</div>
+	</section>
+
+	{# Regroupement des sections pour l'espacement #}
+	<section class="flex flex-col mt-[60px]">
+		{# Section produits en promo #}
+		<section
+			class="flex flex-col space-y-10 pb-[80px] border-b-2"
+
+			{# Promo informations #}
+			<div
+				class="flex flex-col space-y-5">
+				{# Indication du jour #}
+				<div class="flex space-x-5 items-center">
+					<div class="h-[30px] w-[15px] bg-[#1C448E] rounded-sm"></div>
+					<p class="text-[#1C448E] font-[600]">Aujourd'hui</p>
+				</div>
+
+				{# Partie du compte à rebours #}
+				<div
+					class="flex items-center justify-between">
+					{# Compte à rebours #}
+					<div class="flex space-x-[70px] items-center">
+						<h1 class=" text-2xl font-[700]">Vente Flash</h1>
+						<div class="flex space-x-5 items-center">
+							<div class="flex flex-col items-center">
+								<span class="text-[10px]">Jours</span>
+								<span class="text-3xl font-[600]">03</span>
+							</div>
+
+							<span class="text-red-800 text-xl font-[700]">:</span>
+
+							<div class="flex flex-col items-center">
+								<span class="text-[10px]">Heures</span>
+								<span class="text-3xl font-[600]">23</span>
+							</div>
+
+							<span class="text-red-800 text-xl font-[700]">:</span>
+
+							<div class="flex flex-col items-center">
+								<span class="text-[10px]">Minutes</span>
+								<span class="text-3xl font-[600]">19</span>
+							</div>
+
+							<span class="text-red-800 text-xl font-[700]">:</span>
+
+							<div class="flex flex-col items-center">
+								<span class="text-[10px]">Secondes</span>
+								<span class="text-3xl font-[600]">56</span>
+							</div>
+						</div>
+					</div>
+
+					{# Bouttons defilements produits #}
+					<div class="flex space-x-2 items-center">
+						<a href="#" class="p-2 rounded-full bg-gray-200">
+							<i class="fa-solid fa-arrow-left"></i>
+						</a>
+						<a href="#" class="p-2 rounded-full bg-gray-200">
+							<i class="fa-solid fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			{# Partie affichage des produits #}
+			<div
+				class="flex space-x-[50px]">
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+						<span class="text-gray-500 line-through">130€</span>
+					</div>
+
+					<div class="flex items-center space-x-[10px]">
+						<div class="flex items-center space-x-[3px]">
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+						</div>
+						<span class="ml-[15px] text-gray-600">(88)</span>
+					</div>
+				</div>
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+						<span class="text-gray-500 line-through">130€</span>
+					</div>
+
+					<div class="flex items-center space-x-[10px]">
+						<div class="flex items-center space-x-[3px]">
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+						</div>
+						<span class="ml-[15px] text-gray-600">(88)</span>
+					</div>
+				</div>
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+						<span class="text-gray-500 line-through">130€</span>
+					</div>
+
+					<div class="flex items-center space-x-[10px]">
+						<div class="flex items-center space-x-[3px]">
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+						</div>
+						<span class="ml-[15px] text-gray-600">(88)</span>
+					</div>
+				</div>
+
+				{# Un produit au complet #}
+				<div
+					class="flex flex-col space-y-3 max-w-[260px]">
+
+					{# Carte du produit #}
+					<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+						<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">-40%</span>
+						<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+
+							<div class="bg-white p-2 rounded-full">
+								<i class="fa-regular fa-eye"></i>
+							</div>
+						</div>
+
+						<div class="w-full h-full flex justify-center items-center">
+							<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+						</div>
+
+						<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+					</div>
+
+					{# Autres informations supplementaire #}
+					<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+					<div class="flex space-x-4">
+						<span class="text-[#1C448E] font-[700]">100€</span>
+						<span class="text-gray-500 line-through">130€</span>
+					</div>
+
+					<div class="flex items-center space-x-[10px]">
+						<div class="flex items-center space-x-[3px]">
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+							<i class="fa-solid fa-star text-yellow-500"></i>
+						</div>
+						<span class="ml-[15px] text-gray-600">(88)</span>
+					</div>
+				</div>
+			</div>
+
+			{# Boutton pour voir les produits #}
+			<div class="flex justify-center">
+				<button class="bg-[#1C448E] text-white px-7 py-4 rounded-md transition-all duration-300 ease-in-out hover:text-gray-300">Voir tous les produits</button>
+			</div>
+
+		</section>
+
+		{# Section recherche par categorie #}
+		<section
+			class="flex flex-col space-y-10 py-[80px] border-b-2">
+
+			{# Informations categorie #}
+			<div
+				class="flex flex-col space-y-5">
+				{# Indication #}
+				<div class="flex space-x-5 items-center">
+					<div class="h-[30px] w-[15px] bg-[#1C448E] rounded-sm"></div>
+					<p class="text-[#1C448E] font-[600]">Categories</p>
+				</div>
+
+				{# Titre et boutons #}
+				<div class="flex items-center justify-between">
+
+					<h1 class=" text-2xl font-[700]">Chercher par catégorie</h1>
+
+					<div class="flex space-x-2 items-center">
+						<a href="#" class="p-2 rounded-full bg-gray-200">
+							<i class="fa-solid fa-arrow-left"></i>
+						</a>
+						<a href="#" class="p-2 rounded-full bg-gray-200">
+							<i class="fa-solid fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			{# Listes des categories #}
+			<div
+				class="flex space-x-10">
+
+				{# Un seul categorie #}
+				<a href="#" class="flex flex-col space-y-3 px-4 py-5 border-2 bg-white">
+					<div class="p-[5px]">
+						<img class="object-contain h-[80px]" src="{{ asset('./img/produits/produit_acier_plat.png') }}">
+					</div>
+					<p class="text-center">FERS PLATS</p>
+				</a>
+
+				{# Un seul categorie #}
+				<a href="#" class="flex flex-col space-y-3 px-4 py-5 border-2 bg-white">
+					<div class="p-[5px]">
+						<img class="object-contain h-[80px]" src="{{ asset('./img/produits/produit_acier_plat.png') }}">
+					</div>
+					<p class="text-center">FERS PLATS</p>
+				</a>
+
+				{# Un seul categorie #}
+				<a href="#" class="flex flex-col space-y-3 px-4 py-5 border-2 bg-white">
+					<div class="p-[5px]">
+						<img class="object-contain h-[80px]" src="{{ asset('./img/produits/produit_acier_plat.png') }}">
+					</div>
+					<p class="text-center">FERS PLATS</p>
+				</a>
+
+				{# Un seul categorie #}
+				<a href="#" class="flex flex-col space-y-3 px-4 py-5 border-2 bg-[#1C448E]">
+					<div class="bg-white p-[5px]">
+						<img class="object-contain h-[80px]" src="{{ asset('./img/produits/produit_acier_plat.png') }}">
+					</div>
+					<p class="text-center text-white">FERS PLATS</p>
+				</a>
+
+				{# Un seul categorie #}
+				<a href="#" class="flex flex-col space-y-3 px-4 py-5 border-2 bg-white">
+					<div class="p-[5px]">
+						<img class="object-contain h-[80px]" src="{{ asset('./img/produits/produit_acier_plat.png') }}">
+					</div>
+					<p class="text-center">FERS PLATS</p>
+				</a>
+
+				{# Un seul categorie #}
+				<a href="#" class="flex flex-col space-y-3 px-4 py-5 border-2 bg-white">
+					<div class="p-[5px]">
+						<img class="object-contain h-[80px]" src="{{ asset('./img/produits/produit_acier_plat.png') }}">
+					</div>
+					<p class="text-center">FERS PLATS</p>
+				</a>
+
+				{# Un seul categorie #}
+				<a href="#" class="flex flex-col space-y-3 px-4 py-5 border-2 bg-white">
+					<div class="p-[5px]">
+						<img class="object-contain h-[80px]" src="{{ asset('./img/produits/produit_acier_plat.png') }}">
+					</div>
+					<p class="text-center">FERS PLATS</p>
+				</a>
+			</div>
+		</section>
+
+		{# Section presentation produit #}
+		<section class="flex flex-col space-y-10 py-[80px] border-b-2">
+			<div
+				class="bg-black w-full flex text-white px-[40px]">
+				{# Informations du produit #}
+				<div class="flex-1 flex flex-col space-y-[100px] justify-center">
+					<div class="flex flex-col">
+						<p class="text-[#1C448E]">Categories</p>
+
+						<h1 class="text-white text-[80px] font-[600]">Fers en T</h1>
+					</div>
+
+					<div class="flex flex-col space-y-5">
+						<div class="flex space-x-5">
+							<div class="flex flex-col justify-center items-center bg-white rounded-full p-3">
+								<p class="text-sm font-[800]">23</p>
+								<p class="text-xs">Heures</p>
+							</div>
+
+							<div class="flex flex-col justify-center items-center bg-white rounded-full p-3">
+								<p class="text-sm font-[800]">05</p>
+								<p class="text-xs">Jours</p>
+							</div>
+
+							<div class="flex flex-col justify-center items-center bg-white rounded-full p-3">
+								<p class="text-sm font-[800]">59</p>
+								<p class="text-xs">Minutes</p>
+							</div>
+
+							<div class="flex flex-col justify-center items-center bg-white rounded-full p-3">
+								<p class="text-sm font-[800]">35</p>
+								<p class="text-xs">Secondes</p>
+							</div>
+						</div>
+
+						<div>
+							<button class="bg-[#1C448E] text-center px-7 py-4 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Acheter maintenant!</button>
+						</div>
+					</div>
+				</div>
+
+				{# Produit image #}
+				<div class="relative flex-1 flex justify-center">
+					<div class="absolute right-0 custom-gradient h-full w-full backdrop-blur-3xl"></div>
+					<img class="object-contain z-50 py-[60px]" src="{{ asset('./img/produits/ferT.png') }}" alt="Product Image"/>
+				</div>
+
+			</div>
+		</section>
+
+		{# Section presentations des barres #}
+		<section class="flex flex-col space-y-10 py-[80px] pb-[120px]">
+			{# Informations categorie #}
+			<div
+				class="flex flex-col space-y-5">
+				{# Indication #}
+				<div class="flex space-x-5 items-center">
+					<div class="h-[30px] w-[15px] bg-[#1C448E] rounded-sm"></div>
+					<p class="text-[#1C448E] font-[600]">Nos produits</p>
+				</div>
+
+				{# Titre et boutons #}
+				<div class="flex items-center justify-between">
+
+					<h1 class=" text-2xl font-[700]">Explorer nos barres</h1>
+
+					<div class="flex space-x-2 items-center">
+						<a href="#" class="p-2 rounded-full bg-gray-200">
+							<i class="fa-solid fa-arrow-left"></i>
+						</a>
+						<a href="#" class="p-2 rounded-full bg-gray-200">
+							<i class="fa-solid fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			{# Partie affichage des produits #}
+			<div class="flex flex-col space-y-[70px]">
+				{# Première ligne #}
+				<div
+					class="flex justify-between">
+
+					{# Un produit au complet #}
+					<div
+						class="flex flex-col space-y-3 max-w-[260px]">
+
+						{# Carte du produit #}
+						<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+							<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">NEW !</span>
+							<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-heart"></i>
+								</div>
+
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-eye"></i>
+								</div>
+							</div>
+
+							<div class="w-full h-full flex justify-center items-center">
+								<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+							</div>
+
+							<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+						</div>
+
+						{# Autres informations supplementaire #}
+						<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+						<div class="flex space-x-4">
+							<span class="text-[#1C448E] font-[700]">100€</span>
+						</div>
+
+						<div class="flex items-center space-x-[10px]">
+							<div class="flex items-center space-x-[3px]">
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+							</div>
+							<span class="ml-[15px] text-gray-600">(88)</span>
+						</div>
+
+						<div class="flex space-x-3">
+							<div class=" bg-blue-800 outline outline-[2px] outline-offset-2 rounded-full h-[12px] w-[12px]"></div>
+							<div class=" bg-red-800 rounded-full h-[12px] w-[12px]"></div>
+						</div>
+					</div>
+
+					{# Un produit au complet #}
+					<div
+						class="flex flex-col space-y-3 max-w-[260px]">
+
+						{# Carte du produit #}
+						<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+							<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">NEW !</span>
+							<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-heart"></i>
+								</div>
+
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-eye"></i>
+								</div>
+							</div>
+
+							<div class="w-full h-full flex justify-center items-center">
+								<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+							</div>
+
+							<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+						</div>
+
+						{# Autres informations supplementaire #}
+						<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+						<div class="flex space-x-4">
+							<span class="text-[#1C448E] font-[700]">100€</span>
+						</div>
+
+						<div class="flex items-center space-x-[10px]">
+							<div class="flex items-center space-x-[3px]">
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+							</div>
+							<span class="ml-[15px] text-gray-600">(88)</span>
+						</div>
+
+						<div class="flex space-x-3">
+							<div class=" bg-blue-800 outline outline-[2px] outline-offset-2 rounded-full h-[12px] w-[12px]"></div>
+							<div class=" bg-red-800 rounded-full h-[12px] w-[12px]"></div>
+						</div>
+					</div>
+
+					{# Un produit au complet #}
+					<div
+						class="flex flex-col space-y-3 max-w-[260px]">
+
+						{# Carte du produit #}
+						<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+							<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">NEW !</span>
+							<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-heart"></i>
+								</div>
+
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-eye"></i>
+								</div>
+							</div>
+
+							<div class="w-full h-full flex justify-center items-center">
+								<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+							</div>
+
+							<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+						</div>
+
+						{# Autres informations supplementaire #}
+						<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+						<div class="flex space-x-4">
+							<span class="text-[#1C448E] font-[700]">100€</span>
+						</div>
+
+						<div class="flex items-center space-x-[10px]">
+							<div class="flex items-center space-x-[3px]">
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+							</div>
+							<span class="ml-[15px] text-gray-600">(88)</span>
+						</div>
+
+						<div class="flex space-x-3">
+							<div class=" bg-blue-800 outline outline-[2px] outline-offset-2 rounded-full h-[12px] w-[12px]"></div>
+							<div class=" bg-red-800 rounded-full h-[12px] w-[12px]"></div>
+						</div>
+					</div>
+
+					{# Un produit au complet #}
+					<div
+						class="flex flex-col space-y-3 max-w-[260px]">
+
+						{# Carte du produit #}
+						<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+							<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">NEW !</span>
+							<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-heart"></i>
+								</div>
+
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-eye"></i>
+								</div>
+							</div>
+
+							<div class="w-full h-full flex justify-center items-center">
+								<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+							</div>
+
+							<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+						</div>
+
+						{# Autres informations supplementaire #}
+						<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+						<div class="flex space-x-4">
+							<span class="text-[#1C448E] font-[700]">100€</span>
+						</div>
+
+						<div class="flex items-center space-x-[10px]">
+							<div class="flex items-center space-x-[3px]">
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+							</div>
+							<span class="ml-[15px] text-gray-600">(88)</span>
+						</div>
+
+						<div class="flex space-x-3">
+							<div class=" bg-blue-800 outline outline-[2px] outline-offset-2 rounded-full h-[12px] w-[12px]"></div>
+							<div class=" bg-red-800 rounded-full h-[12px] w-[12px]"></div>
+						</div>
+					</div>
+				</div>
+
+				{# Deuxieme ligne #}
+				<div
+					class="flex justify-between">
+
+					{# Un produit au complet #}
+					<div
+						class="flex flex-col space-y-3 max-w-[260px]">
+
+						{# Carte du produit #}
+						<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+							<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">NEW !</span>
+							<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-heart"></i>
+								</div>
+
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-eye"></i>
+								</div>
+							</div>
+
+							<div class="w-full h-full flex justify-center items-center">
+								<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+							</div>
+
+							<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+						</div>
+
+						{# Autres informations supplementaire #}
+						<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+						<div class="flex space-x-4">
+							<span class="text-[#1C448E] font-[700]">100€</span>
+						</div>
+
+						<div class="flex items-center space-x-[10px]">
+							<div class="flex items-center space-x-[3px]">
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+							</div>
+							<span class="ml-[15px] text-gray-600">(88)</span>
+						</div>
+
+						<div class="flex space-x-3">
+							<div class=" bg-blue-800 outline outline-[2px] outline-offset-2 rounded-full h-[12px] w-[12px]"></div>
+							<div class=" bg-red-800 rounded-full h-[12px] w-[12px]"></div>
+						</div>
+					</div>
+
+					{# Un produit au complet #}
+					<div
+						class="flex flex-col space-y-3 max-w-[260px]">
+
+						{# Carte du produit #}
+						<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+							<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">NEW !</span>
+							<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-heart"></i>
+								</div>
+
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-eye"></i>
+								</div>
+							</div>
+
+							<div class="w-full h-full flex justify-center items-center">
+								<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+							</div>
+
+							<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+						</div>
+
+						{# Autres informations supplementaire #}
+						<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+						<div class="flex space-x-4">
+							<span class="text-[#1C448E] font-[700]">100€</span>
+						</div>
+
+						<div class="flex items-center space-x-[10px]">
+							<div class="flex items-center space-x-[3px]">
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+							</div>
+							<span class="ml-[15px] text-gray-600">(88)</span>
+						</div>
+
+						<div class="flex space-x-3">
+							<div class=" bg-blue-800 outline outline-[2px] outline-offset-2 rounded-full h-[12px] w-[12px]"></div>
+							<div class=" bg-red-800 rounded-full h-[12px] w-[12px]"></div>
+						</div>
+					</div>
+
+					{# Un produit au complet #}
+					<div
+						class="flex flex-col space-y-3 max-w-[260px]">
+
+						{# Carte du produit #}
+						<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+							<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">NEW !</span>
+							<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-heart"></i>
+								</div>
+
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-eye"></i>
+								</div>
+							</div>
+
+							<div class="w-full h-full flex justify-center items-center">
+								<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+							</div>
+
+							<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+						</div>
+
+						{# Autres informations supplementaire #}
+						<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+						<div class="flex space-x-4">
+							<span class="text-[#1C448E] font-[700]">100€</span>
+						</div>
+
+						<div class="flex items-center space-x-[10px]">
+							<div class="flex items-center space-x-[3px]">
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+							</div>
+							<span class="ml-[15px] text-gray-600">(88)</span>
+						</div>
+
+						<div class="flex space-x-3">
+							<div class=" bg-blue-800 outline outline-[2px] outline-offset-2 rounded-full h-[12px] w-[12px]"></div>
+							<div class=" bg-red-800 rounded-full h-[12px] w-[12px]"></div>
+						</div>
+					</div>
+
+					{# Un produit au complet #}
+					<div
+						class="flex flex-col space-y-3 max-w-[260px]">
+
+						{# Carte du produit #}
+						<div class="relative bg-gray-200 h-[290px] w-[260px] rounded-md">
+							<span class="absolute left-0 top-0 m-2 p-1 bg-[#1C448E] text-white rounded-md">NEW !</span>
+							<div class="absolute right-0 top-0 m-2 flex flex-col space-y-3">
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-heart"></i>
+								</div>
+
+								<div class="bg-white p-2 rounded-full">
+									<i class="fa-regular fa-eye"></i>
+								</div>
+							</div>
+
+							<div class="w-full h-full flex justify-center items-center">
+								<img class="object-contain w-[70%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+							</div>
+
+							<button class="absolute bottom-0 w-full bg-[#1C448E] text-center p-3 rounded-md text-white transition-all duration-300 ease-in-out hover:text-gray-300">Ajouter au panier</button>
+						</div>
+
+						{# Autres informations supplementaire #}
+						<h1 class="font-[700] text-lg">CORNIERES A AILES INEGALES</h1>
+
+						<div class="flex space-x-4">
+							<span class="text-[#1C448E] font-[700]">100€</span>
+						</div>
+
+						<div class="flex items-center space-x-[10px]">
+							<div class="flex items-center space-x-[3px]">
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+								<i class="fa-solid fa-star text-yellow-500"></i>
+							</div>
+							<span class="ml-[15px] text-gray-600">(88)</span>
+						</div>
+
+						<div class="flex space-x-3">
+							<div class=" bg-blue-800 outline outline-[2px] outline-offset-2 rounded-full h-[12px] w-[12px]"></div>
+							<div class=" bg-red-800 rounded-full h-[12px] w-[12px]"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{# Boutton pour voir les produits #}
+			<div class="flex justify-center">
+				<button class="bg-[#1C448E] text-white px-7 py-4 rounded-md transition-all duration-300 ease-in-out hover:text-gray-300">Voir tous les produits</button>
+			</div>
+		</section>
+	</section>
+
 
 {% endblock %}

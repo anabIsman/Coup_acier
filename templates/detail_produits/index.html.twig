@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="my-[60px]">
+		<h1 class="tracking-widest font-[200]">Produit / Tubes /
+			<strong class="font-[600]">Tubes rond</strong>
+		</h1>
+	</div>
+
+	{# Section detail du produit #}
+	<section
+		class="flex space-x-[40px]">
+
+		{# Images du produit #}
+		<section
+			class="flex space-x-[20px] w-4/6">
+
+			{# Petites images à gauche pour image #}
+			<div
+				class="flex flex-col space-y-10">
+
+				{# Carte de l'image #}
+				<div class="bg-gray-200 h-[100px] w-[160px] rounded-md">
+					<div class="w-full h-full flex justify-center items-center">
+						<img class="object-contain h-[90%] w-[90%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+					</div>
+				</div>
+
+				{# Carte de l'image #}
+				<div class="bg-gray-200 h-[100px] w-[160px] rounded-md">
+					<div class="w-full h-full flex justify-center items-center">
+						<img class="object-contain h-[90%] w-[90%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+					</div>
+				</div>
+
+				{# Carte de l'image #}
+				<div class="bg-gray-200 h-[100px] w-[160px] rounded-md">
+					<div class="w-full h-full flex justify-center items-center">
+						<img class="object-contain h-[90%] w-[90%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+					</div>
+				</div>
+
+				{# Carte de l'image #}
+				<div class="bg-gray-200 h-[100px] w-[160px] rounded-md">
+					<div class="w-full h-full flex justify-center items-center">
+						<img class="object-contain h-[90%] w-[90%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+					</div>
+				</div>
+			</div>
+
+			{# Grande image #}
+			<div
+				class="flex-1">
+				{# Carte de l'image #}
+				<div class="bg-gray-200 h-full rounded-md">
+					<div class="h-full flex justify-center items-center">
+						<img class="object-contain h-[80%]" src="{{ asset("./img/produits/produit_acier_banc.png") }}">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{# Details produit #}
+		<div
+			class="w-2/6 flex flex-col space-y-10">
+
+			{# Informations produit #}
+			<div class="flex flex-col space-y-3 pb-[30px] border-b-2">
+				<h1 class="text-3xl ">Tube rond</h1>
+				<div class="flex items-center">
+					<div class="flex items-center space-x-[3px]">
+						<i class="fa-solid fa-star text-yellow-500"></i>
+						<i class="fa-solid fa-star text-yellow-500"></i>
+						<i class="fa-solid fa-star text-yellow-500"></i>
+						<i class="fa-solid fa-star text-yellow-500"></i>
+						<i class="fa-solid fa-star text-yellow-500"></i>
+					</div>
+					<p class="ml-[15px] text-gray-400">(150 vues)</p>
+
+					<span class="mx-[15px] text-gray-400">|</span>
+
+					<p class="text-gray-400">En stock</p>
+				</div>
+
+				<h1 class="text-2xl font-[400]">192.00€</h1>
+
+				<p>Les tubes ronds en métal sont des cylindres creux fabriqués à partir de divers matériaux métalliques tels que l'acier, l'aluminium ou l'acier 
+                inoxydable. Leur forme circulaire leur confère une grande résistance. Ils sont largement utilisés dans la construction, l'industrie 
+                manufacturière et les applications artistiques pour leur robustesse et leur polyvalence.</p>
+			</div>
+
+            <div class="flex space-x-7 items-center">
+                <span class="text-2xl">Taille :</span>
+
+                <div class="flex space-x-4">
+                    <span class="p-2 border border-2 rounded-md w-[35px] text-center">XS</span>
+                    <span class="p-2 border border-2 rounded-md w-[35px] text-center">S</span>
+                    <span class="p-2 bg-[#1C448E] text-white rounded-md w-[35px] text-center">M</span>
+                    <span class="p-2 border border-2 rounded-md w-[35px] text-center">L</span>
+                    <span class="p-2 border border-2 rounded-md w-[35px] text-center">XL</span>
+                </div>
+            </div>
+		</div>
+	</section>
+
+{% endblock %}

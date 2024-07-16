@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!Doctype html>
 <html lang="fr" data-bs-theme="auto">
 	<head>
 		<meta charset="utf-8">
@@ -7,70 +6,163 @@
 		<title>Coup_Acier</title>
 		<meta name="description" content="Le site spécialisé dans la vente des métaux Made In France">
 
-		<link rel="stylesheet" href="{{ asset('styles/libs/style.css') }}">
-		<link href="{{ asset('styles/libs/bootstrap.min.css')}}" rel="stylesheet">
-		<link href="{{asset('styles/carousel.css')}}" rel="stylesheet">
-		<link href="{{asset('styles/custom.css')}}" rel="stylesheet">
-		<script src="https://unpkg.com/feather-icons"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="{{ asset('build/app.css') }}">
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
 
 		{% block javascripts %}
-           {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
+			{% block importmap %}
+				{{ importmap('app') }}
+			{% endblock %}
+		{% endblock %}
 	</head>
 	<body>
 
-		<header data-bs-theme="dark">
-			<nav class="navbar navbar-expand-md navbar-light fixed-top bg-dark">
-            <div class="nav-container">
-				<div class="container-fluid">
-					<a class="navbar-brand dark" href="#">Coup'acier</a>
-					
-					<div class="collapse navbar-collapse" id="navbarCollapse">
-						<ul class="navbar-nav me-auto mb-2 mb-md-0">
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">Accueil</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Produits</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
-							</li>
+		{# Toute la page web #}
+		<main
+			class="min-h-screen flex flex-col justify-between">
 
-                            <li class="nav-item">
-								<a class="nav-link" href="#">A propos</a>
-							</li>
+			{# En-tête de la page #}
+			<header
+				class="pt-5 px-5 lg:mx-[120px] md:mx-[60px] mx-[20px]">
+
+				{# Menu de navigation de la page #}
+				<nav class="flex text-center w-full items-center border-b-2 pb-5">
+					<a href="/" class="flex-1 flex justify-start font-bold text-2xl">Coup'acier</a>
+					<div class="flex-1 flex justify-center">
+						<ul class="flex justify-center space-x-5 list-style-none">
+							<li>Accueil</li>
+							<li><a href="/produits">Produits</a></li>
+							<li>Categories</li>
+							<li>A propos</li>
+							<li>Contact</li>
 						</ul>
-						<div class="speed-menu">
-							<a href="">
-								<i data-feather="shopping-cart"></i>
-							</a>
-							<a href="">
-								<i data-feather="user"></i>
-							</a>
-							
+					</div>
+					<div class="flex-1 flex space-x-6 justify-end items-center">
+						<div class="relative">
+							<input class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-blue-500" placeholder="Que cherchez-vous ?"/>
+							<button type="submit" class="absolute inset-y-0 right-0 pr-3 flex items-center">
+								<i class="fa-solid fa-magnifying-glass text-gray-500 hover:text-blue-500"></i>
+							</button>
+						</div>
+						<i class="fa-solid fa-cart-shopping"></i>
+						<i class="fa-solid fa-user"></i>
+					</div>
+				</nav>
+			</header>
+
+			{# Corps de la page #}
+			<section class="lg:mx-[120px] md:mx-[60px] mx-[20px] flex flex-col"> {% block body %}{% endblock %}
+				</section>
+
+				{# Bas de page #}
+				<footer
+					class="bg-black lg:px-[120px] md:px-[60px] px-[20px] py-5 flex flex-col">
+
+					{# Partie du dessus du bas de page #}
+					<div
+						class="flex flex-wrap space-x-10 py-5 border-b-[1px] border-gray-800">
+
+						{# Première Information #}
+						<div class="flex-1 flex flex-col space-y-6">
+							<h1 class="text-white font-[900] text-xl">INFORMATION</h1>
+							<p class="text-white font-[50]">Notre site permet la prise de commandes, l'aide à la découpe, les livraisons des matériaux.</p>
+							<div class="flex space-x-5 justify-start text-xl">
+								<a href="#" class="text-white">
+									<i class="fa-brands fa-facebook"></i>
+								</a>
+								<a href="#" class="text-white">
+									<i class="fa-brands fa-twitter"></i>
+								</a>
+								<a href="#" class="text-white">
+									<i class="fa-brands fa-instagram"></i>
+								</a>
+								<a href="#" class="text-white">
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+							</div>
+						</div>
+
+						{# Partie navigation #}
+						<div class="flex-1 flex flex-col space-y-6">
+							<h1 class="text-white font-[900] text-xl">NAVIGATION</h1>
+							<div class="flex flex-col space-y-3">
+								<a href="#" class="flex space-x-3 items-center">
+									<i class="text-white fa-solid fa-chevron-right"></i>
+									<p class="text-white">Accueil</p>
+								</a>
+
+								<a href="#" class="flex space-x-3 items-center">
+									<i class="text-white fa-solid fa-chevron-right"></i>
+									<p class="text-white">Produit</p>
+								</a>
+
+								<a href="#" class="flex space-x-3 items-center">
+									<i class="text-white fa-solid fa-chevron-right"></i>
+									<p class="text-white">A Propos</p>
+								</a>
+
+								<a href="#" class="flex space-x-3 items-center">
+									<i class="text-white fa-solid fa-chevron-right"></i>
+									<p class="text-white">Contact</p>
+								</a>
+							</div>
+						</div>
+
+						{# Partie nous contacter #}
+						<div class="flex-1 flex flex-col space-y-6">
+							<h1 class="text-white font-[900] text-xl">NOUS CONTACTER</h1>
+							<div class="flex flex-col space-y-5">
+								<div class="flex space-x-3 items-center">
+									<i class="text-white fa-solid fa-location-dot"></i>
+									<p class="text-white">Paris</p>
+								</div>
+
+								<div class="flex space-x-3 items-center">
+									<i class="text-white fa-solid fa-envelope"></i>
+									<p class="text-white">CoupAcier@gmail.com</p>
+								</div>
+
+								<input class="text-white bg-gray-600 text-white outline-none px-5 py-3 border-b-4 border-gray-400" placeholder="Adresse mail"/>
+
+								<button class="bg-gray-400 text-white px-7 py-4 font-[600] text-center transition-all duration-300 hover:bg-gray-700">Souscrire</button>
+							</div>
+						</div>
+
+						{# Partie téléchargement #}
+						<div class="flex-1 flex flex-col space-y-6">
+							<h1 class="text-white font-[600] text-lg">Télécharger l'app</h1>
+
+							<p class="text-white font-[50]">Economisez 3€ avec l'app, nouvel utilisateur uniquement.</p>
+
+
+							<div class="flex space-x-1">
+								<div class="flex-1">
+									<a href="#"><img class="h-[150px] object-contain" src={{ asset("./img/qrcode.png") }}></a>
+								</div>
+
+								<div class="flex-1 flex flex-col justify-between">
+									<a href="#"><img class="h-[60px] object-contain" src={{ asset("./img/googleplay.png") }}></a>
+									<a href="#"><img class="h-[60px] object-contain" src={{ asset("./img/appstore.png") }}></a>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-            </div>
-			</nav>
-		</header>
 
-		<main>
+					{# Deuxième partie du bas de page #}
+					<div class="text-gray-800 text-center py-6">
+						<p>&copy Copyright 2024. All right reserved</p>
+					</div>
 
-			{%  block body %}
-            {% endblock %}
-		
-			<footer class="container">
-				<p>&copy; 2017–2024 La Boutique Française
-					<a href="#">CGV</a>
-					&middot;
-					<a href="#">CGU</a>
-				</p>
-			</footer>
-		</main>
+				</footer>
+			</main>
 
-		<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-		<script src="{{ asset('js/global.js') }}"></script>
-	</body>
-</html>
+			<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+			<script src="{{ asset('js/global.js') }}"></script>
+		</body>
+	</html>
